@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mahesh - AI Automation Guy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-4 md:p-10 font-sans">
+
+    <header class="bg-white p-6 rounded-lg mb-4">
+      <h1 class="text-xl md:text-3xl font-bold text-blue-600">Mahesh Automation</h1>
+      <nav class="mt-2">
+        <a href="#services" class="text-blue-600 mr-3">Services</a>
+        <a href="#about" class="text-blue-600 mr-3">About</a>
+        <a href="#contact" class="text-blue-600">Contact</a>
+      </nav>
+    </header>
+
+    <section id="services" class="bg-white p-6 rounded-lg mb-4">
+      <h2 class="text-xl font-bold mb-3">My Services</h2>
+      <ul class="list-disc ml-5">
+        <li>WhatsApp Automation</li>
+        <li>Instagram DM Automation</li>
+        <li>Lead to Google Sheet</li>
+      </ul>
+    </section>
+
+    <section id="about" class="bg-white p-6 rounded-lg mb-4">
+      <h2 class="text-xl font-bold mb-3">About Me</h2>
+      <p>I help small businesses save 10 hours every week with AI automation.</p>
+    </section>
+
+    <section id="contact" class="bg-white p-6 rounded-lg mb-4">
+      <h2 class="text-xl font-bold mb-3">Contact Me - Get 10 Hours Back</h2>
+      <form id="contactForm" action="#" method="POST">
+        <label class="block mb-1">Name:</label>
+        <input id="nameInput" type="text" class="w-full p-3 border border-gray-300 rounded-lg mb-4" required>
+        
+        <label class="block mb-1">Email:</label>
+        <input id="emailInput" type="email" class="w-full p-3 border border-gray-300 rounded-lg mb-4" required>
+        
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg">Book a Call</button>
+      </form>
+      <p id="thankYouMessage" class="mt-4 font-bold text-green-600"></p>
+    </section>
+
+    <footer class="text-center text-sm text-gray-600 mt-4">
+      <p>© 2026 Mahesh - AI Automator</p>
+    </footer>
+
+    <script>
+      // 1. Find the form
+      let form = document.getElementById("contactForm");
+
+      // 2. Listen for submit
+      form.addEventListener("submit", function(event) {
+        // 3. Stop page reload
+        event.preventDefault();
+
+        // 4. Read name typed
+        let name = document.getElementById("nameInput").value;
+
+        // 5. Show thank you message
+        document.getElementById("thankYouMessage").innerText = "Thank you " + name + "! We will call you in 24 hours. 🚀";
+        
+        console.log("Lead captured: " + name);
+      });
+    </script>
+
+  </body>
+</html>
